@@ -1,0 +1,5 @@
+#define SECRET_DEVICE_KEY "2348ssH!YyHu234GdasdfM"
+#define SECRET_MQTT_PASS "Password"
+#define SECRET_MQTT_USERNAME "Username"
+#define SECRET_WIFI_PASS "WifiPassword"
+#define SECRET_SSID "WifiSSID"
