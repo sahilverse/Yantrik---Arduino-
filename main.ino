@@ -90,7 +90,6 @@ void setup()
 void loop()
 {
     ArduinoCloud.update(); // Handle IoT Cloud updates
-    sendDhtData();
     delay(100);
 }
 
@@ -140,7 +139,7 @@ void sensorTask(void *pvParameters)
         if (currentMillis - previousDhtMillis >= DHT_INTERVAL)
         {
             previousDhtMillis = currentMillis;
-            float temperature = dht.readTemperature();
+            temperature = dht.readTemperature();
 
             if (!isnan(temperature))
             {
@@ -227,6 +226,8 @@ void reconnectMQTT()
         }
     }
 }
+
+
 
 // MQTT Callback
 void mqttCallback(char *topic, byte *payload, unsigned int length)
